@@ -1,56 +1,68 @@
-body {
-  font-family: 'Montserrat', sans-serif;
+/* Общие стили */
+* {
   margin: 0;
   padding: 0;
-  color: #333;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1a2a44; /* Темно-синий фон как у navyahypnosis */
+  color: #ffffff; /* Белый текст */
   line-height: 1.6;
 }
 
+/* Навигация */
 header {
+  background: #1a2a44;
+  padding: 20px 0;
   position: fixed;
-  top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  top: 0;
+  z-index: 1000;
 }
 
 nav {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .logo {
   font-size: 24px;
   font-weight: 700;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  list-style: none;
 }
 
-nav a {
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: #d3d8e0; /* Светло-серый для ссылок */
   text-decoration: none;
-  color: #2c3e50;
   font-weight: 400;
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #3498db;
+nav ul li a:hover {
+  color: #3498db; /* Синий акцент при наведении */
 }
 
+/* Главная секция */
 .hero {
   height: 100vh;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(200, 220, 240, 0.8)), url('background.jpg');
+  background: linear-gradient(to bottom, rgba(26, 42, 68, 0.8), rgba(26, 42, 68, 0.8)), url('background.jpg');
   background-size: cover;
-  background-position: center; /* Добавляем центрирование */
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,58 +73,45 @@ nav a:hover {
 
 .hero h1 {
   font-size: 48px;
-  color: #2c3e50;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .hero p {
   font-size: 20px;
-  color: #34495e;
+  color: #d3d8e0; /* Светло-серый для подзаголовка */
 }
 
+/* Секции */
 section {
-  max-width: 1200px;
-  margin: 80px auto;
-  padding: 0 20px;
-  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff; /* Белый фон для секций как у navyahypnosis */
+  color: #1a2a44; /* Темно-синий текст внутри белых секций */
 }
 
-h2 {
+section h2 {
   font-size: 36px;
-  color: #2c3e50;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #1a2a44;
 }
 
-h3 {
-  font-size: 24px;
-  color: #2c3e50;
-  margin-bottom: 10px;
+.problems-container, .services-container, .pricing-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .problems-container, .services-container {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
 }
 
 .pricing-container {
-  display: flex;
-  flex-wrap: nowrap; /* Убираем перенос */
-  justify-content: space-around;
-  gap: 20px;
-}
-
-.pricing-plan {
-  background: #ecf0f1;
-  padding: 20px;
-  border-radius: 10px;
-  width: 30%; /* Фиксируем ширину для каждой карточки */
-  transition: transform 0.3s;
+  flex-wrap: nowrap;
 }
 
 .problem, .service, .pricing-plan {
-  background: #ecf0f1;
+  background: #f7f9fc; /* Очень светлый серо-синий фон для карточек */
   padding: 20px;
   border-radius: 10px;
   width: 30%;
@@ -120,40 +119,47 @@ h3 {
 }
 
 .problem:hover, .service:hover, .pricing-plan:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
-.pricing-plan.popular {
-  background: #3498db;
-  color: white;
+.problem h3, .service h3, .pricing-plan h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #1a2a44;
 }
 
-.pricing-plan.popular h3, .pricing-plan.popular .price {
-  color: white;
+.problem p, .service p, .pricing-plan p {
+  font-size: 16px;
+  color: #1a2a44;
 }
 
 .price {
   font-size: 28px;
   font-weight: 700;
-  color: #2c3e50;
+  color: #3498db; /* Синий для цен */
   margin: 10px 0;
 }
 
 .pricing-plan ul {
   list-style: none;
-  padding: 0;
-  text-align: left;
+  margin: 10px 0;
 }
 
 .pricing-plan ul li {
   margin: 5px 0;
+  color: #1a2a44;
 }
 
+.popular {
+  border: 2px solid #3498db; /* Синий акцент для популярного плана */
+}
+
+/* Кнопка */
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background: #3498db;
-  color: white;
+  background: #3498db; /* Синий для кнопок */
+  color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
   margin-top: 10px;
@@ -161,19 +167,18 @@ h3 {
 }
 
 .button:hover {
-  background: #2980b9;
+  background: #2980b9; /* Темнее при наведении */
 }
 
-#contact iframe {
-  max-width: 600px;
-  margin: 0 auto;
-  display: block;
-}
-
-footer {
-  background: #2c3e50;
-  color: white;
+/* Контакты */
+#contact {
   text-align: center;
+}
+
+/* Подвал */
+footer {
+  background: #1a2a44;
   padding: 20px;
-  margin-top: 80px;
+  text-align: center;
+  color: #d3d8e0;
 }

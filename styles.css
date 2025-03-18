@@ -168,7 +168,7 @@ section h2 {
 
 .card-image {
   width: 100%;
-  max-height: 100px; /* Уменьшенный размер для карточек */
+  max-height: 300px; /* Уменьшенный размер для карточек */
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;

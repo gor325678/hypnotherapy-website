@@ -75,7 +75,7 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-  font-family: 'Playfair Display', serif; /* Playfair Display для h1 */
+  font-family: 'Playfair Display', serif;
   font-size: 60px;
   font-weight: 700;
   color: #ffffff;
@@ -84,7 +84,7 @@ nav ul li a:hover {
 }
 
 .hero p {
-  font-size: 24px;
+  font-size: 18px; /* Уменьшенный размер для подзаголовка */
   color: #ffffff;
   margin-bottom: 30px;
 }

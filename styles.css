@@ -6,8 +6,8 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #1a2a44; /* Темно-синий фон */
+  font-family: 'Catchy Mager', sans-serif; /* Новый шрифт для текста */
+  background-color: #1a2a44;
   color: #ffffff;
   line-height: 1.6;
 }
@@ -47,14 +47,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #d3d8e0; /* Светло-серый для ссылок */
+  color: #d3d8e0;
   text-decoration: none;
   font-weight: 400;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #3498db; /* Синий акцент при наведении */
+  color: #3498db;
 }
 
 /* Главная секция */
@@ -75,6 +75,7 @@ nav ul li a:hover {
 }
 
 .hero h1 {
+  font-family: 'Catchy Mager', sans-serif; /* Новый шрифт для заголовка */
   font-size: 60px;
   font-weight: 700;
   color: #ffffff;
@@ -108,16 +109,17 @@ nav ul li a:hover {
 /* Секции */
 section {
   padding: 60px 20px;
-  background: #ffffff; /* Белый фон по умолчанию */
-  color: #1a2a44; /* Темно-синий текст */
+  background: #ffffff;
+  color: #1a2a44;
 }
 
 #what-is, #efficiency {
-  background: #1a3c34; /* Темно-зелёный фон */
+  background: #1a3c34;
   color: #ffffff;
 }
 
 section h2 {
+  font-family: 'Catchy Mager', sans-serif; /* Новый шрифт для h2 */
   font-size: 36px;
   margin-bottom: 30px;
   text-align: center;
@@ -125,12 +127,12 @@ section h2 {
 }
 
 #what-is h2, #efficiency h2 {
-  color: #ffffff; /* Белый заголовок на зелёном фоне */
+  color: #ffffff;
 }
 
 .section-image {
   display: block;
-  max-width: 400px; /* Уменьшенный размер для больших изображений */
+  max-width: 400px;
   height: auto;
   margin: 20px auto;
   border-radius: 10px;
@@ -147,11 +149,11 @@ section h2 {
 }
 
 .pricing-container {
-  flex-wrap: nowrap; /* Цены в одну строку */
+  flex-wrap: nowrap;
 }
 
 .problem, .service, .pricing-plan {
-  background: #f7f9fc; /* Светлый фон карточек */
+  background: #f7f9fc;
   padding: 20px;
   border-radius: 10px;
   width: 30%;
@@ -159,7 +161,7 @@ section h2 {
 }
 
 #what-is .problem, #efficiency .problem {
-  background: #2a5c54; /* Чуть светлее для карточек на зелёном фоне */
+  background: #2a5c54;
 }
 
 .problem:hover, .service:hover, .pricing-plan:hover {
@@ -168,13 +170,14 @@ section h2 {
 
 .card-image {
   width: 100%;
-  max-height: 300px; /* Уменьшенный размер для карточек */
+  max-height: 100px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
 .problem h3, .service h3, .pricing-plan h3 {
+  font-family: 'Catchy Mager', sans-serif; /* Новый шрифт для h3 */
   font-size: 24px;
   margin-bottom: 10px;
   color: #1a2a44;
@@ -188,7 +191,7 @@ section h2 {
 .price {
   font-size: 28px;
   font-weight: 700;
-  color: #3498db; /* Синий для цен */
+  color: #3498db;
   margin: 10px 0;
 }
 
@@ -203,7 +206,7 @@ section h2 {
 }
 
 .popular {
-  border: 2px solid #3498db; /* Акцент для популярного плана */
+  border: 2px solid #3498db;
 }
 
 /* Кнопка */

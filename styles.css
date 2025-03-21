@@ -196,12 +196,12 @@ h1 {
 
 .mind-evolution-section .arrow {
   position: absolute;
-  width: 50px; /* Размер стрелки */
-  height: 100px;
+  width: 75px; /* Увеличено на 50% с 50px */
+  height: 150px; /* Увеличено на 50% с 100px */
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.7;
-  animation: moveUp 6s linear infinite; /* 6 секунд для плавного потока */
+  animation: moveUp 8.4s linear infinite; /* Замедлено на 40% (с 6s до 8.4s) */
 }
 
 /* Ряд 1 (левый) */
@@ -219,26 +219,26 @@ h1 {
   left: 70%;
 }
 
-/* Стрелки в первом ряду */
+/* Стрелки в первом ряду (серый цвет) */
 .mind-evolution-section .arrow-1-1 { animation-delay: 0s; background-image: url('arrow-gray.png'); }
-.mind-evolution-section .arrow-1-2 { animation-delay: 1.2s; background-image: url('arrow-gray.png'); filter: hue-rotate(30deg); }
-.mind-evolution-section .arrow-1-3 { animation-delay: 2.4s; background-image: url('arrow-gray.png'); filter: hue-rotate(60deg); }
-.mind-evolution-section .arrow-1-4 { animation-delay: 3.6s; background-image: url('arrow-gray.png'); filter: hue-rotate(90deg); }
-.mind-evolution-section .arrow-1-5 { animation-delay: 4.8s; background-image: url('arrow-gray.png'); filter: hue-rotate(120deg); }
+.mind-evolution-section .arrow-1-2 { animation-delay: 1.68s; background-image: url('arrow-gray.png'); }
+.mind-evolution-section .arrow-1-3 { animation-delay: 3.36s; background-image: url('arrow-gray.png'); }
+.mind-evolution-section .arrow-1-4 { animation-delay: 5.04s; background-image: url('arrow-gray.png'); }
+.mind-evolution-section .arrow-1-5 { animation-delay: 6.72s; background-image: url('arrow-gray.png'); }
 
-/* Стрелки во втором ряду */
-.mind-evolution-section .arrow-2-1 { animation-delay: 0.3s; background-image: url('arrow-gray.png'); filter: hue-rotate(30deg); }
-.mind-evolution-section .arrow-2-2 { animation-delay: 1.5s; background-image: url('arrow-gray.png'); filter: hue-rotate(60deg); }
-.mind-evolution-section .arrow-2-3 { animation-delay: 2.7s; background-image: url('arrow-gray.png'); filter: hue-rotate(90deg); }
-.mind-evolution-section .arrow-2-4 { animation-delay: 3.9s; background-image: url('arrow-gray.png'); filter: hue-rotate(120deg); }
-.mind-evolution-section .arrow-2-5 { animation-delay: 5.1s; background-image: url('arrow-gray.png'); filter: hue-rotate(150deg); }
+/* Стрелки во втором ряду (градиентный переход) */
+.mind-evolution-section .arrow-2-1 { animation-delay: 0.42s; background-image: url('arrow-gray.png'); filter: hue-rotate(30deg); }
+.mind-evolution-section .arrow-2-2 { animation-delay: 2.1s; background-image: url('arrow-gray.png'); filter: hue-rotate(60deg); }
+.mind-evolution-section .arrow-2-3 { animation-delay: 3.78s; background-image: url('arrow-gray.png'); filter: hue-rotate(90deg); }
+.mind-evolution-section .arrow-2-4 { animation-delay: 5.46s; background-image: url('arrow-gray.png'); filter: hue-rotate(120deg); }
+.mind-evolution-section .arrow-2-5 { animation-delay: 7.14s; background-image: url('arrow-gray.png'); filter: hue-rotate(150deg); }
 
-/* Стрелки в третьем ряду */
-.mind-evolution-section .arrow-3-1 { animation-delay: 0.6s; background-image: url('arrow-gray.png'); filter: hue-rotate(60deg); }
-.mind-evolution-section .arrow-3-2 { animation-delay: 1.8s; background-image: url('arrow-gray.png'); filter: hue-rotate(90deg); }
-.mind-evolution-section .arrow-3-3 { animation-delay: 3.0s; background-image: url('arrow-gray.png'); filter: hue-rotate(120deg); }
-.mind-evolution-section .arrow-3-4 { animation-delay: 4.2s; background-image: url('arrow-gray.png'); filter: hue-rotate(150deg); }
-.mind-evolution-section .arrow-3-5 { animation-delay: 5.4s; background-image: url('arrow-beige.png'); }
+/* Стрелки в третьем ряду (бежевый цвет) */
+.mind-evolution-section .arrow-3-1 { animation-delay: 0.84s; background-image: url('arrow-beige.png'); }
+.mind-evolution-section .arrow-3-2 { animation-delay: 2.52s; background-image: url('arrow-beige.png'); }
+.mind-evolution-section .arrow-3-3 { animation-delay: 4.2s; background-image: url('arrow-beige.png'); }
+.mind-evolution-section .arrow-3-4 { animation-delay: 5.88s; background-image: url('arrow-beige.png'); }
+.mind-evolution-section .arrow-3-5 { animation-delay: 7.56s; background-image: url('arrow-beige.png'); }
 
 @keyframes moveUp {
   0% {
@@ -287,6 +287,18 @@ section h2 {
   height: auto;
   margin: 20px auto;
   border-radius: 10px;
+}
+
+/* Обтекание текстом для изображения в #what-is */
+#what-is .float-image {
+  max-width: 500px; /* Увеличено с 400px */
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#what-is .text-wrapper {
+  overflow: hidden; /* Для корректного обтекания */
 }
 
 .problems-container, .services-container, .pricing-container {
@@ -410,5 +422,11 @@ footer {
 
   .mind-evolution-section h1 {
     font-size: 28px; /* Уменьшаем заголовок на мобильных */
+  }
+
+  /* Отключаем обтекание на мобильных */
+  #what-is .float-image {
+    float: none;
+    margin: 20px auto;
   }
 }

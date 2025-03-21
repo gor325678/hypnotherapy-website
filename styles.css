@@ -74,7 +74,6 @@ nav ul li a:hover {
   max-width: 800px;
 }
 
-/* Переименовываем .hero h1 в более общий селектор, чтобы использовать в других секциях */
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 60px;
@@ -188,8 +187,8 @@ h1 {
 .mind-evolution-section .arrows {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 30%; /* Ограничиваем ширину для правой стороны */
   height: 100%;
   overflow: hidden;
   z-index: 0;
@@ -197,37 +196,60 @@ h1 {
 
 .mind-evolution-section .arrow {
   position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-bottom: 50px solid #f5d7a3;
-  opacity: 0.5;
-  animation: moveUp 5s infinite;
+  width: 50px; /* Размер стрелки */
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  animation: moveUp 6s linear infinite; /* 6 секунд для плавного потока */
 }
 
-.mind-evolution-section .arrow-1 {
-  left: 30%;
-  animation-delay: 0s;
+/* Ряд 1 (левый) */
+.mind-evolution-section .arrow-row1 {
+  left: 10%;
 }
 
-.mind-evolution-section .arrow-2 {
-  left: 50%;
-  animation-delay: 1s;
+/* Ряд 2 (средний) */
+.mind-evolution-section .arrow-row2 {
+  left: 40%;
 }
 
-.mind-evolution-section .arrow-3 {
+/* Ряд 3 (правый) */
+.mind-evolution-section .arrow-row3 {
   left: 70%;
-  animation-delay: 2s;
 }
+
+/* Стрелки в первом ряду */
+.mind-evolution-section .arrow-1-1 { animation-delay: 0s; background-image: url('arrow-gray.png'); }
+.mind-evolution-section .arrow-1-2 { animation-delay: 1.2s; background-image: url('arrow-gray.png'); filter: hue-rotate(30deg); }
+.mind-evolution-section .arrow-1-3 { animation-delay: 2.4s; background-image: url('arrow-gray.png'); filter: hue-rotate(60deg); }
+.mind-evolution-section .arrow-1-4 { animation-delay: 3.6s; background-image: url('arrow-gray.png'); filter: hue-rotate(90deg); }
+.mind-evolution-section .arrow-1-5 { animation-delay: 4.8s; background-image: url('arrow-gray.png'); filter: hue-rotate(120deg); }
+
+/* Стрелки во втором ряду */
+.mind-evolution-section .arrow-2-1 { animation-delay: 0.3s; background-image: url('arrow-gray.png'); filter: hue-rotate(30deg); }
+.mind-evolution-section .arrow-2-2 { animation-delay: 1.5s; background-image: url('arrow-gray.png'); filter: hue-rotate(60deg); }
+.mind-evolution-section .arrow-2-3 { animation-delay: 2.7s; background-image: url('arrow-gray.png'); filter: hue-rotate(90deg); }
+.mind-evolution-section .arrow-2-4 { animation-delay: 3.9s; background-image: url('arrow-gray.png'); filter: hue-rotate(120deg); }
+.mind-evolution-section .arrow-2-5 { animation-delay: 5.1s; background-image: url('arrow-gray.png'); filter: hue-rotate(150deg); }
+
+/* Стрелки в третьем ряду */
+.mind-evolution-section .arrow-3-1 { animation-delay: 0.6s; background-image: url('arrow-gray.png'); filter: hue-rotate(60deg); }
+.mind-evolution-section .arrow-3-2 { animation-delay: 1.8s; background-image: url('arrow-gray.png'); filter: hue-rotate(90deg); }
+.mind-evolution-section .arrow-3-3 { animation-delay: 3.0s; background-image: url('arrow-gray.png'); filter: hue-rotate(120deg); }
+.mind-evolution-section .arrow-3-4 { animation-delay: 4.2s; background-image: url('arrow-gray.png'); filter: hue-rotate(150deg); }
+.mind-evolution-section .arrow-3-5 { animation-delay: 5.4s; background-image: url('arrow-beige.png'); }
 
 @keyframes moveUp {
   0% {
     transform: translateY(100vh);
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
   }
   100% {
     transform: translateY(-100vh);

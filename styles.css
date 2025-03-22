@@ -257,6 +257,79 @@ h1 {
   }
 }
 
+/* Новый блок #steps */
+#steps {
+  padding: 60px 20px;
+  background: #1a3c34; /* Темный фон, как в #what-is и #efficiency */
+  color: #ffffff;
+  text-align: center;
+}
+
+#steps h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  background: #2a5c54; /* Чуть светлее фона секции, как в #what-is .problem */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: #3498db; /* Акцентный цвет сайта */
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.step-content {
+  flex: 1;
+  text-align: left;
+}
+
+.step-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.step-content p {
+  font-size: 16px;
+  color: #d3d8e0; /* Светлый текст для контраста */
+}
+
+#steps .hero-button {
+  margin-top: 30px;
+  background-color: #f5d7a3; /* Цвет кнопки, как в #mind-evolution */
+  color: #1a2a44;
+}
+
+#steps .hero-button:hover {
+  background: #3498db;
+  color: #ffffff;
+}
+
 /* Секции */
 section {
   padding: 60px 20px;
@@ -401,7 +474,7 @@ footer {
   color: #d3d8e0;
 }
 
-/* Адаптивность для нового блока */
+/* Адаптивность */
 @media (max-width: 768px) {
   .mind-evolution-content {
     flex-direction: column;
@@ -428,5 +501,20 @@ footer {
   #what-is .float-image {
     float: none;
     margin: 20px auto;
+  }
+
+  /* Адаптивность для #steps */
+  .step {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .step-number {
+    margin: 0 auto 15px;
+  }
+
+  .step-content {
+    text-align: center;
   }
 }

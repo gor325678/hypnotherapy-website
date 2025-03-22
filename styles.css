@@ -188,54 +188,81 @@ h1 {
 /* Стрелки */
 .mind-evolution-section .arrow {
   position: absolute;
-  width: 150px; /* Размер из предыдущего изменения */
-  height: 300px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.7;
-  animation: moveUp 67.2s linear infinite; /* Скорость из предыдущего изменения */
   z-index: 0; /* Стрелки ниже контента */
 }
 
-/* Ряд 1 (левый) */
-.mind-evolution-section .arrow-row1 {
-  left: calc(50% - 15% + 10%); /* Смещение влево на 50% + 10% для ряда */
+/* Форма треугольника с помощью псевдоэлемента */
+.mind-evolution-section .arrow::before {
+  content: '';
+  position: absolute;
+  border-left: 25px solid transparent; /* Для больших стрелок */
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid transparent; /* Цвет будет переопределен ниже */
 }
 
-/* Ряд 2 (средний) */
-.mind-evolution-section .arrow-row2 {
-  left: calc(50% - 15% + 40%);
+/* Маленькие стрелки */
+.mind-evolution-section .arrow-small::before {
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid transparent; /* Меньший размер */
 }
 
-/* Ряд 3 (правый) */
-.mind-evolution-section .arrow-row3 {
-  left: calc(50% - 15% + 70%);
+/* Цвета стрелок */
+.mind-evolution-section .arrow-gray::before {
+  border-bottom-color: #d3d8e0; /* Серый цвет */
 }
 
-/* Стрелки в первом ряду (серый цвет) */
-.mind-evolution-section .arrow-1-1 { animation-delay: 0s; background-image: url('arrow-gray.png'); }
-.mind-evolution-section .arrow-1-2 { animation-delay: 13.44s; background-image: url('arrow-gray.png'); }
-.mind-evolution-section .arrow-1-3 { animation-delay: 26.88s; background-image: url('arrow-gray.png'); }
-.mind-evolution-section .arrow-1-4 { animation-delay: 40.32s; background-image: url('arrow-gray.png'); }
-.mind-evolution-section .arrow-1-5 { animation-delay: 53.76s; background-image: url('arrow-gray.png'); }
+.mind-evolution-section .arrow-beige::before {
+  border-bottom-color: #f5d7a3; /* Бежевый цвет */
+}
 
-/* Стрелки во втором ряду (градиентный переход) */
-.mind-evolution-section .arrow-2-1 { animation-delay: 3.36s; background-image: url('arrow-gray.png'); filter: hue-rotate(30deg); }
-.mind-evolution-section .arrow-2-2 { animation-delay: 16.8s; background-image: url('arrow-gray.png'); filter: hue-rotate(60deg); }
-.mind-evolution-section .arrow-2-3 { animation-delay: 30.24s; background-image: url('arrow-gray.png'); filter: hue-rotate(90deg); }
-.mind-evolution-section .arrow-2-4 { animation-delay: 43.68s; background-image: url('arrow-gray.png'); filter: hue-rotate(120deg); }
-.mind-evolution-section .arrow-2-5 { animation-delay: 57.12s; background-image: url('arrow-gray.png'); filter: hue-rotate(150deg); }
+/* Позиции и анимация для каждой стрелки */
+.mind-evolution-section .arrow-1 {
+  left: calc(50% - 15% + 20% + 10%); /* Сдвиг вправо на 20% */
+  animation: moveDown 67.2s linear infinite;
+  animation-delay: 0s;
+}
 
-/* Стрелки в третьем ряду (бежевый цвет) */
-.mind-evolution-section .arrow-3-1 { animation-delay: 6.72s; background-image: url('arrow-beige.png'); }
-.mind-evolution-section .arrow-3-2 { animation-delay: 20.16s; background-image: url('arrow-beige.png'); }
-.mind-evolution-section .arrow-3-3 { animation-delay: 33.6s; background-image: url('arrow-beige.png'); }
-.mind-evolution-section .arrow-3-4 { animation-delay: 47.04s; background-image: url('arrow-beige.png'); }
-.mind-evolution-section .arrow-3-5 { animation-delay: 60.48s; background-image: url('arrow-beige.png'); }
+.mind-evolution-section .arrow-2 {
+  left: calc(50% - 15% + 20% + 20%);
+  animation: moveDown 67.2s linear infinite;
+  animation-delay: 10s;
+}
 
-@keyframes moveUp {
+.mind-evolution-section .arrow-3 {
+  left: calc(50% - 15% + 20% + 30%);
+  animation: moveDown 67.2s linear infinite;
+  animation-delay: 20s;
+}
+
+.mind-evolution-section .arrow-4 {
+  left: calc(50% - 15% + 20% + 40%);
+  animation: moveDown 67.2s linear infinite;
+  animation-delay: 30s;
+}
+
+.mind-evolution-section .arrow-5 {
+  left: calc(50% - 15% + 20% + 50%);
+  animation: moveDown 67.2s linear infinite;
+  animation-delay: 40s;
+}
+
+.mind-evolution-section .arrow-6 {
+  left: calc(50% - 15% + 20% + 60%);
+  animation: moveDown 67.2s linear infinite;
+  animation-delay: 50s;
+}
+
+.mind-evolution-section .arrow-7 {
+  left: calc(50% - 15% + 20% + 70%);
+  animation: moveDown 67.2s linear infinite;
+  animation-delay: 60s;
+}
+
+/* Анимация движения сверху вниз */
+@keyframes moveDown {
   0% {
-    transform: translateY(100vh);
+    top: -50px; /* Начало чуть выше видимой области */
     opacity: 0;
   }
   10% {
@@ -245,7 +272,7 @@ h1 {
     opacity: 0.7;
   }
   100% {
-    transform: translateY(-100vh);
+    top: 100vh; /* Движение вниз за пределы блока */
     opacity: 0;
   }
 }

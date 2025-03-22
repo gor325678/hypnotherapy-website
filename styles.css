@@ -109,8 +109,8 @@ h1 {
 /* Новый блок #mind-evolution */
 .mind-evolution-section {
   position: relative;
-  background: linear-gradient(135deg, #1a2a44 0%, #2e3b55 100%);
-  color: #ffffff;
+  background: #333333; /* Тёмно-серый фон */
+  color: #ffffff; /* Белый цвет текста */
   padding: 60px 20px; /* Соответствует padding других секций */
   min-height: 80vh;
   display: flex;
@@ -142,11 +142,12 @@ h1 {
   font-size: 36px; /* Меньше, чем в .hero, чтобы соответствовать пропорциям */
   line-height: 1.2;
   margin-bottom: 20px;
+  color: #ffffff; /* Белый цвет заголовка */
 }
 
 .mind-evolution-section .hero-button {
-  background-color: #f5d7a3; /* Цвет кнопки из оригинального дизайна */
-  color: #1a2a44;
+  background-color: #f5d7a3; /* Бежевый фон кнопки */
+  color: #1a2a44; /* Тёмный текст на кнопке */
   padding: 15px 30px;
   border: none;
   border-radius: 5px;
@@ -159,25 +160,26 @@ h1 {
 }
 
 .mind-evolution-section .hero-button:hover {
-  background: #3498db;
-  color: #ffffff;
+  background: #3498db; /* Синий фон при наведении */
+  color: #ffffff; /* Белый текст при наведении */
 }
 
 .mind-evolution-section p {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   margin-bottom: 10px;
+  color: #ffffff; /* Белый цвет текста */
 }
 
 .mind-evolution-section .link {
   font-family: 'Inter', sans-serif;
-  color: #f5d7a3;
+  color: #f5d7a3; /* Бежевый цвет для ссылок */
   text-decoration: underline;
   transition: color 0.3s;
 }
 
 .mind-evolution-section .link:hover {
-  color: #3498db;
+  color: #3498db; /* Синий цвет при наведении */
 }
 
 .mind-evolution-section .image-content img {
@@ -209,37 +211,37 @@ h1 {
 }
 
 .mind-evolution-section .arrow-2 {
-  left: calc(50% - 15% + 20% + 20%);
+  left: calc(50% - 15% + 20% + 25%);
   animation: moveUp 67.2s linear infinite;
   animation-delay: 10s;
 }
 
 .mind-evolution-section .arrow-3 {
-  left: calc(50% - 15% + 20% + 30%);
+  left: calc(50% - 15% + 20% + 40%);
   animation: moveUp 67.2s linear infinite;
   animation-delay: 20s;
 }
 
 .mind-evolution-section .arrow-4 {
-  left: calc(50% - 15% + 20% + 40%);
+  left: calc(50% - 15% + 20% + 55%);
   animation: moveUp 67.2s linear infinite;
   animation-delay: 30s;
 }
 
 .mind-evolution-section .arrow-5 {
-  left: calc(50% - 15% + 20% + 50%);
+  left: calc(50% - 15% + 20% + 70%);
   animation: moveUp 67.2s linear infinite;
   animation-delay: 40s;
 }
 
 .mind-evolution-section .arrow-6 {
-  left: calc(50% - 15% + 20% + 60%);
+  left: calc(50% - 15% + 20% + 85%);
   animation: moveUp 67.2s linear infinite;
   animation-delay: 50s;
 }
 
 .mind-evolution-section .arrow-7 {
-  left: calc(50% - 15% + 20% + 70%);
+  left: calc(50% - 15% + 20% + 100%);
   animation: moveUp 67.2s linear infinite;
   animation-delay: 60s;
 }

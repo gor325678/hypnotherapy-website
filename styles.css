@@ -188,81 +188,66 @@ h1 {
 /* Стрелки */
 .mind-evolution-section .arrow {
   position: absolute;
+  width: 225px; /* Увеличено на 50% (было 150px) */
+  height: 450px; /* Увеличено на 50% (было 300px) */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
   z-index: 0; /* Стрелки ниже контента */
 }
 
-/* Форма треугольника с помощью псевдоэлемента */
-.mind-evolution-section .arrow::before {
-  content: '';
-  position: absolute;
-  border-left: 25px solid transparent; /* Для больших стрелок */
-  border-right: 25px solid transparent;
-  border-bottom: 50px solid transparent; /* Цвет будет переопределен ниже */
-}
-
-/* Маленькие стрелки */
-.mind-evolution-section .arrow-small::before {
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 30px solid transparent; /* Меньший размер */
-}
-
-/* Цвета стрелок */
-.mind-evolution-section .arrow-gray::before {
-  border-bottom-color: #d3d8e0; /* Серый цвет */
-}
-
-.mind-evolution-section .arrow-beige::before {
-  border-bottom-color: #f5d7a3; /* Бежевый цвет */
+/* Все стрелки — бежевые */
+.mind-evolution-section .arrow-beige {
+  background-image: url('arrow-beige.png');
 }
 
 /* Позиции и анимация для каждой стрелки */
 .mind-evolution-section .arrow-1 {
   left: calc(50% - 15% + 20% + 10%); /* Сдвиг вправо на 20% */
-  animation: moveDown 67.2s linear infinite;
+  animation: moveUp 67.2s linear infinite;
   animation-delay: 0s;
 }
 
 .mind-evolution-section .arrow-2 {
   left: calc(50% - 15% + 20% + 20%);
-  animation: moveDown 67.2s linear infinite;
+  animation: moveUp 67.2s linear infinite;
   animation-delay: 10s;
 }
 
 .mind-evolution-section .arrow-3 {
   left: calc(50% - 15% + 20% + 30%);
-  animation: moveDown 67.2s linear infinite;
+  animation: moveUp 67.2s linear infinite;
   animation-delay: 20s;
 }
 
 .mind-evolution-section .arrow-4 {
   left: calc(50% - 15% + 20% + 40%);
-  animation: moveDown 67.2s linear infinite;
+  animation: moveUp 67.2s linear infinite;
   animation-delay: 30s;
 }
 
 .mind-evolution-section .arrow-5 {
   left: calc(50% - 15% + 20% + 50%);
-  animation: moveDown 67.2s linear infinite;
+  animation: moveUp 67.2s linear infinite;
   animation-delay: 40s;
 }
 
 .mind-evolution-section .arrow-6 {
   left: calc(50% - 15% + 20% + 60%);
-  animation: moveDown 67.2s linear infinite;
+  animation: moveUp 67.2s linear infinite;
   animation-delay: 50s;
 }
 
 .mind-evolution-section .arrow-7 {
   left: calc(50% - 15% + 20% + 70%);
-  animation: moveDown 67.2s linear infinite;
+  animation: moveUp 67.2s linear infinite;
   animation-delay: 60s;
 }
 
-/* Анимация движения сверху вниз */
-@keyframes moveDown {
+/* Анимация движения снизу вверх, начиная с середины блока */
+@keyframes moveUp {
   0% {
-    top: -50px; /* Начало чуть выше видимой области */
+    top: 50vh; /* Начало с середины блока */
     opacity: 0;
   }
   10% {
@@ -272,7 +257,7 @@ h1 {
     opacity: 0.7;
   }
   100% {
-    top: 100vh; /* Движение вниз за пределы блока */
+    top: -450px; /* Уход за верхнюю границу (учитывая высоту стрелки) */
     opacity: 0;
   }
 }
